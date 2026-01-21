@@ -1,0 +1,136 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    font-size: 100%;
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: $cream;
+
+    font-family: $montserrat;
+    font-weight: $bold;
+    font-size: 0.875rem;
+    color: $grey;
+
+    line-height: 1.5;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    width: 100svw;
+}
+
+.sub-container {
+    width: 93.3%;
+    background-color: $white;
+    border-radius: 8px;
+
+    .mobile-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+}
+
+article {
+    padding: 2rem;
+
+    .perfume {
+        margin-block-start: 0;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    h1 {
+        font-family: $fraunces;
+        font-weight: $extrabold;
+        font-size: 2rem;
+        color: $black;
+        line-height: 1;
+    }
+
+    p {
+        margin-block-end: 0;
+    }
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    
+    h1 {
+        color: $green-500;
+        padding-inline-end: 1rem;
+    }
+
+    p {
+        text-decoration: line-through;
+    }
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 1rem 0;
+
+    background-color: $green-500;
+    color: $white;
+
+    font-family: inherit;
+    font-weight: $extrabold;
+
+    border: none;
+    border-radius: 8px;
+
+    img {
+        padding-inline-end: 0.5rem;
+    }
+
+    &:hover {
+        background-color: $green-700;
+        transition: 300ms ease-in-out;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 624px) {
+    .sub-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 450px;
+        width: 600px;
+        border-radius: 8px;
+
+        background-color: $white;
+
+        .desktop-img {
+            display: block;
+            height: 100%;
+            border-radius: 8px 0 0 8px;
+        }
+        .mobile-img {
+            display: none;
+        }
+    }
+}
+
