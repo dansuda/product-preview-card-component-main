@@ -3,7 +3,6 @@ html {
 }
 
 * {
-  font-size: 100%;
   box-sizing: inherit;
 }
 
@@ -48,7 +47,7 @@ article .perfume {
   margin-block-start: 0;
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 0.3125rem;
 }
 article h1 {
   font-family: "Fraunces", serif;
@@ -92,17 +91,16 @@ button img {
 }
 button:hover {
   background-color: hsl(158, 42%, 18%);
-  transition: 300ms ease-in-out;
   cursor: pointer;
 }
 
-@media (min-width: 624px) {
+@media (min-width: 39rem) {
   .sub-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 450px;
-    width: 600px;
+    height: 28.125rem;
+    width: 37.5rem;
     border-radius: 8px;
     background-color: hsl(0, 0%, 100%);
   }
@@ -113,5 +111,15 @@ button:hover {
   }
   .sub-container .mobile-img {
     display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  button:hover {
+    transition: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  button:hover {
+    transition: 300ms ease-in-out;
   }
 }/*# sourceMappingURL=styles.css.map */
